@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,14 +26,14 @@ public class SocksServiceImpl implements SocksService {
     }
 
 
-   /* @PostConstruct
+    @PostConstruct
     private void init() {
         try {
             readFromFile();
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
     @Override
     public Socks addSocks(Socks socks, long quantity) {
